@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box; /* Incluye el padding y el borde en el ancho y alto total */
+  margin: 0; /* Elimina el margen predeterminado */
+  padding: 0; /* Elimina el padding predeterminado */
+}
+
+.ancho {
+  max-width: 1200px; /* Ancho máximo del contenedor */
+  margin: 0 auto; /* Centra el contenedor */
+}
+
+body {
+  font-family: 'Arimo', sans-serif; /* Aplica la tipografía Arimo */
+  font-size: 16px; /* Tamaño de fuente base */
+  line-height: 24px; /* Altura de línea */
+  color: #333; /* Color del texto */
+}
+
+header {
+  background-color: #f2f2f2; /* Color de fondo del encabezado */
+  padding: 10px; /* Espaciado interno */
+  text-align: center; /* Alinea el contenido al centro */
+  display: flex; /* Muestra el contenido en flexbox */
+  justify-content: space-between; /* Espacia los elementos en el encabezado */
+}
+
+header img {
+  height: 30px; /* Altura del logo */
+  width: auto; /* Ancho automático para mantener la proporción */
+}
+
+.image-menu-container {
+  display: flex; /* Muestra los elementos en línea */
+  align-items: center; /* Centra los elementos verticalmente */
+}
+
+.navigation {
+  display: block; /* Mostrar el menú por defecto */
+}
+
+nav ul {
+  list-style: none; /* Elimina el estilo de lista */
+  padding: 0; /* Elimina el padding */
+  margin: 0; /* Elimina el margen */
+  display: flex; /* Muestra los elementos en línea */
+  gap: 15px; /* Espacio entre los elementos */
+  justify-content: space-evenly; /* Espacio uniforme entre los elementos */
+}
+
+nav ul li {
+  margin: 0; /* Elimina el margen de los elementos de la lista */
+}
+
+nav ul li a {
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  color: black; /* Color del texto del enlace */
+}
+
+.menu-button {
+  border-radius: 10px; /* Bordes redondeados para el botón */
+  padding: 5px; /* Espaciado interno */
+  display: none; /* Oculta el botón por defecto */
+  margin-left: auto; /* Empuja el botón hacia la derecha */
+}
+
+.menu-button button {
+  background: none; /* Sin fondo */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  padding: 0; /* Sin espaciado interno */
+  align-items: center; /* Centra los elementos verticalmente */
+}
+
+.menu-button i {
+  width: 24px; /* Ancho del icono */
+  height: 24px; /* Alto del icono */
+  font-size: 25px; /* Tamaño del icono */
+  color: #6cb500; /* Color del icono */
+  transition: transform 0.4s ease-in-out; /* Transición para el icono */
+}
+
+.hero {
+  text-align: center; /* Alinea el texto al centro */
+  background-size: cover; /* Cubre todo el fondo */
+  background-position: center; /* Centra la imagen de fondo */
+  padding: 150px 0; /* Espaciado superior e inferior */
+  background-image: url('imagenes/foto_slide.jpg'); /* Imagen de fondo */
+}
+
+.hero h2 {
+  color: white; /* Color del texto en la sección hero */
+}
+
+.tit {
+  text-align: center; /* Alinea el texto al centro */
+}
+
+.servicios {
+  display: flex; /* Muestra los elementos en flexbox */
+  flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas */
+  justify-content: center; /* Centra los elementos */
+  padding: 20px; /* Espaciado interno */
+}
+
+.servicio {
+  width: calc(33.33% - 20px); /* Ancho de cada servicio */
+  margin: 10px; /* Margen entre servicios */
+  text-align: center; /* Alinea el texto al centro */
+  background-color: #f3f3f3; /* Color de fondo del servicio */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+.servicios h3 {
+  color: #6cb500; /* Color del título de los servicios */
+}
+
+.servicio img {
+  width: 100px; /* Ancho de la imagen del servicio */
+  height: auto; /* Altura automática para mantener la proporción */
+}
+
+footer {
+  text-align: center; /* Alinea el texto al centro */
+  padding: 20px; /* Espaciado interno */
+  background-color: #6cb500; /* Color de fondo del pie de página */
+}
+
+footer img {
+  height: 50px; /* Altura del logo en el pie de página */
+  width: auto; /* Ancho automático para mantener la proporción */
+}
+
+@media (max-width: 480px) {
+  header {
+      flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+      align-items: flex-start; /* Alinear el contenido a la izquierda */
+  }
+  .image-menu-container {
+      margin: 0; /* Elimina el margen */
+      width: 100%; /* Asegura que ocupe todo el ancho */
+  }
+  .menu-button {
+      display: flex; /* Mostrar el botón en pantallas pequeñas */
+      margin-top: 10px; /* Espacio entre el logo y el botón */
+  }
+  
+  .navigation {
+      display: none; /* Ocultar por defecto */
+      width: 100%; /* Asegura que ocupe todo el ancho */
+      background-color: #f2f2f2; /* Fondo para el menú */
+  }
+  
+  .navigation.active {
+      display: block; /* Mostrar el menú cuando se activa */
+  }
+
+  nav ul {
+      flex-direction: column; /* Cambiar a columna en móviles */
+      list-style: none; /* Elimina el estilo de lista */
+      width: 100%; /* Asegura que ocupe todo el ancho */
+      margin: 0; /* Elimina el margen */
+      padding: 0; /* Elimina el padding */
+  }
+
+  nav ul li a {
+      display: block; /* Hacer que los enlaces ocupen todo el ancho */
+      padding: 10px 15px; /* Espaciado interno de los enlaces */
+      text-align: center; /* Centra el texto de los enlaces */
+      border: none; /* Sin borde */
+      color: black; /* Color de texto */
+  }
+  nav ul li {
+      border-bottom: dotted 1px; /* Línea entre elementos del menú */
+  }
+  .servicio {
+      width: 100%; /* Ancho completo para cada servicio en móviles */
+      padding: 15px; /* Espaciado interno */
+  }
+  .servicio h3, p {
+      padding: 10px; /* Espaciado interno para el título y párrafo */
+  }
+}
